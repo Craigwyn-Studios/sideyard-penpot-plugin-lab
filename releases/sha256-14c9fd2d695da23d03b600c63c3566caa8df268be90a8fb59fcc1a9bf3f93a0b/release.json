@@ -1,0 +1,68 @@
+{
+  "schema_version": "sideyard.penpot.t27-no-write-bridge-release-receipt.v1",
+  "test_only": true,
+  "capability_state": "manifest_relative_typed_no_write_bridge",
+  "package": "@sideyard/penpot-plugin-t27-candidate-001",
+  "package_version": "0.0.0-t27.1",
+  "release_digest": "14c9fd2d695da23d03b600c63c3566caa8df268be90a8fb59fcc1a9bf3f93a0b",
+  "immutable_path": "releases/sha256-14c9fd2d695da23d03b600c63c3566caa8df268be90a8fb59fcc1a9bf3f93a0b",
+  "target_binding": {
+    "file_id": "1157f24b-a8f1-81bf-8008-c27ff8184acb",
+    "page_id": "1157f24b-a8f1-81bf-8008-c27ff8184acc",
+    "root_id": "00000000-0000-0000-0000-000000000000",
+    "revision": 0
+  },
+  "rollback_predecessor": {
+    "package": "@sideyard/penpot-plugin-t25-candidate-003",
+    "version": "0.0.0-t25.3",
+    "release_digest": "5da77ddb9abf4b32af6967c7b70f0d542691331587ff48a9442c7c644a02175c"
+  },
+  "artifacts": [
+    {
+      "path": "icon.svg",
+      "sha256": "42fbf9a7770d23c162ffd78685d65cb489a755c81a944fd36ece4acbd07d58d9"
+    },
+    {
+      "path": "index.html",
+      "sha256": "5009d3a271a48de71003d2b62743b1c02c554869fbadee708e0df9d1dbc49a51"
+    },
+    {
+      "path": "manifest.json",
+      "sha256": "4b3c43fdc6ba90a58e7f9723a86671d12828f9a8a60e4c6328f22e54a01ad810"
+    },
+    {
+      "path": "plugin.js",
+      "sha256": "d9d9328bf3b7b751b89868a344e206a3daa33ab81ce2248d4d1c04f957846f9f"
+    },
+    {
+      "path": "SBOM.cdx.json",
+      "sha256": "24bd17ad347ebfaaf267a962eb616efc4974f6d198c1ae9b98ca863c2be7e3ef"
+    }
+  ],
+  "protocol": {
+    "accepted_request": "sideyard.t27.bridge.ping.v1",
+    "reply_types": [
+      "sideyard.t27.bridge.ack.v1",
+      "sideyard.t27.bridge.reject.v1"
+    ],
+    "rejection_reasons": [
+      "invalid_message",
+      "unknown_type",
+      "replay_detected"
+    ]
+  },
+  "prohibitions": [
+    "writer",
+    "plan",
+    "approval",
+    "issuer",
+    "credentials",
+    "network",
+    "storage",
+    "sideyard-transport",
+    "document-read",
+    "document-write",
+    "production-target",
+    "external-panel-url"
+  ]
+}

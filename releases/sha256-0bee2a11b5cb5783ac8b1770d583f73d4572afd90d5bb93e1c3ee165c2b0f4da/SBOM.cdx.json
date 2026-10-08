@@ -1,0 +1,24 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "serialNumber": "urn:uuid:00000000-0000-4000-8000-000000000025",
+  "version": 1,
+  "metadata": {
+    "component": {
+      "type": "application",
+      "name": "@sideyard/penpot-plugin-t25-candidate-006",
+      "version": "0.0.0-t25.6"
+    }
+  },
+  "components": [
+    {
+      "type": "library",
+      "name": "@penpot/plugin-types",
+      "version": "1.4.2",
+      "purl": "pkg:npm/%40penpot/plugin-types@1.4.2",
+      "hashes": [{ "alg": "SHA-512", "content": "O8wU6RSYE8bIVU7g8cSTYi32ppxs3R13dq7X3Nn9tmDaJjBOKOBpVLuoRPIp3fJC65fv8/7om0sdrtFoL5v19g==" }]
+    },
+    { "type": "library", "name": "esbuild", "version": "0.25.10", "purl": "pkg:npm/esbuild@0.25.10" },
+    { "type": "library", "name": "typescript", "version": "6.0.3", "purl": "pkg:npm/typescript@6.0.3" }
+  ]
+}

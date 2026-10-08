@@ -1,0 +1,8 @@
+{
+  "name": "Sideyard T29 Signed Authority Envelope Candidate 001",
+  "description": "Disposable origin-bound signed-envelope verifier proof. No Sideyard operation is enabled.",
+  "version": 2,
+  "code": "plugin.js",
+  "icon": "icon.svg",
+  "permissions": ["content:read"]
+}

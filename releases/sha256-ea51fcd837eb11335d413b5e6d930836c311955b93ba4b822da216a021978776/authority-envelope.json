@@ -1,0 +1,14 @@
+{
+  "schema_version": "sideyard.penpot.t29-authority-envelope.v1",
+  "envelope_id": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "panel_origin": "http://127.0.0.1:9204",
+  "panel_nonce": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+  "issued_at_epoch_ms": 1791496945220,
+  "expires_at_epoch_ms": 1791497545220,
+  "issuer": {
+    "key_id": "sideyard.t29.fixture.ed25519",
+    "algorithm": "Ed25519",
+    "keyset_digest": "d9b6df1b0c7f94e70bc52c0487e1cf7a98afb7cd4fae9f9871780cd3cf7e69f5",
+    "signature": "rFT1w957ag_TrxicST3hkrNnAGRcurUGDuD2rIi264c0y6Y2zNNj-jrtLvZqy81az8qS9aNAdzTYtDHdG5UtDg"
+  }
+}

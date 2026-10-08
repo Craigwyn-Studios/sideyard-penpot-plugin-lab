@@ -37,7 +37,10 @@ jobs:
           test -f "$RELEASE_PATH/SHA256SUMS"
           test -f "$RELEASE_PATH/SBOM.spdx.json"
           test -f "$RELEASE_PATH/admission-receipt.json"
-          sha256sum -c "$RELEASE_PATH/SHA256SUMS"
+          (
+            cd "$RELEASE_PATH"
+            sha256sum -c SHA256SUMS
+          )
 
   deploy:
     needs: preflight
@@ -51,9 +54,19 @@ jobs:
       id-token: write
     steps:
       - uses: actions/checkout@v6
+      - name: Prepare immutable static site
+        env:
+          RELEASE_PATH: ${{ inputs.release_path }}
+        run: |
+          rm -rf site
+          mkdir -p site
+          cp -R releases site/releases
+          touch site/.nojekyll
+          test -f "site/$RELEASE_PATH/manifest.json"
+          test -f "site/$RELEASE_PATH/SHA256SUMS"
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v4
         with:
-          path: ${{ inputs.release_path }}
+          path: site
       - id: deployment
         uses: actions/deploy-pages@v4

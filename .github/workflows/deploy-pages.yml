@@ -1,0 +1,58 @@
+name: Controlled T25 Pages Deployment
+
+on:
+  workflow_dispatch:
+    inputs:
+      release_path:
+        description: Content-addressed release directory under releases/
+        required: true
+        type: string
+      admission_receipt_sha256:
+        description: SHA-256 of the independently accepted T25 admission receipt
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: t25-pages-release
+  cancel-in-progress: false
+
+jobs:
+  preflight:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Validate independent admission and immutable path
+        env:
+          ADMISSION: ${{ vars.T25_PAGES_ADMISSION }}
+          RELEASE_PATH: ${{ inputs.release_path }}
+          RECEIPT: ${{ inputs.admission_receipt_sha256 }}
+        run: |
+          test "$ADMISSION" = "authorized"
+          test "$(printf '%s' "$RELEASE_PATH" | grep -Ec '^releases/sha256-[a-f0-9]{64}$')" = 1
+          test "$(printf '%s' "$RECEIPT" | grep -Ec '^[a-f0-9]{64}$')" = 1
+          test -f "$RELEASE_PATH/manifest.json"
+          test -f "$RELEASE_PATH/SHA256SUMS"
+          test -f "$RELEASE_PATH/SBOM.spdx.json"
+          test -f "$RELEASE_PATH/admission-receipt.json"
+          sha256sum -c "$RELEASE_PATH/SHA256SUMS"
+
+  deploy:
+    needs: preflight
+    if: ${{ vars.T25_PAGES_ADMISSION == 'authorized' }}
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+    permissions:
+      pages: write
+      id-token: write
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: ${{ inputs.release_path }}
+      - id: deployment
+        uses: actions/deploy-pages@v4

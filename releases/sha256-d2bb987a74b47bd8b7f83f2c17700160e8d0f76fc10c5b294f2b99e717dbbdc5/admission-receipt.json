@@ -1,0 +1,22 @@
+{
+  "schema_version": "sideyard.penpot.t25-admission-receipt.v1",
+  "disposition": "public_lab_commit_pending_pages_enablement",
+  "release_digest": "d2bb987a74b47bd8b7f83f2c17700160e8d0f76fc10c5b294f2b99e717dbbdc5",
+  "target_binding": {
+    "file_id": "1157f24b-a8f1-81bf-8008-c27ff8184acb",
+    "page_id": "1157f24b-a8f1-81bf-8008-c27ff8184acc",
+    "root_id": "00000000-0000-0000-0000-000000000000",
+    "revision": 0
+  },
+  "authorizes": [
+    "local-static-packet-retention",
+    "public-lab-static-artifact-commit"
+  ],
+  "prohibits": [
+    "pages-enable",
+    "deployment-admission-variable",
+    "workflow-dispatch",
+    "plugin-install",
+    "document-write"
+  ]
+}

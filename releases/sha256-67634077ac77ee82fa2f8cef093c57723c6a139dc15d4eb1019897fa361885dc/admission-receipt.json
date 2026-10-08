@@ -1,0 +1,35 @@
+{
+  "schema_version": "sideyard.penpot.t28-admission-receipt.v1",
+  "disposition": "t28-user-authorized-origin-bound-no-write-bridge-admission",
+  "release_digest": "67634077ac77ee82fa2f8cef093c57723c6a139dc15d4eb1019897fa361885dc",
+  "target_binding": {
+    "file_id": "1157f24b-a8f1-81bf-8008-c27ff8184acb",
+    "page_id": "1157f24b-a8f1-81bf-8008-c27ff8184acc",
+    "root_id": "00000000-0000-0000-0000-000000000000",
+    "revision": 0
+  },
+  "authorizes": [
+    "local-static-packet-retention",
+    "public-lab-static-artifact-commit",
+    "immutable-host-deployment",
+    "no-write-plugin-install",
+    "origin-bound-handshake-exercise",
+    "panel-open",
+    "refresh",
+    "plugin-removal",
+    "rollback-install"
+  ],
+  "prohibits": [
+    "writer",
+    "plan",
+    "approval",
+    "issuer",
+    "credentials",
+    "network",
+    "storage",
+    "sideyard-transport",
+    "document-read",
+    "document-write",
+    "production-target"
+  ]
+}

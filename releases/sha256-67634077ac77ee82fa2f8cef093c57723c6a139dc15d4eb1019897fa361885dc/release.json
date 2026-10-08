@@ -1,0 +1,81 @@
+{
+  "schema_version": "sideyard.penpot.t28-origin-bound-no-write-release-receipt.v1",
+  "test_only": true,
+  "capability_state": "origin_bound_short_lived_session_capability_no_write_bridge",
+  "package": "@sideyard/penpot-plugin-t28-candidate-001",
+  "package_version": "0.0.0-t28.1",
+  "release_digest": "67634077ac77ee82fa2f8cef093c57723c6a139dc15d4eb1019897fa361885dc",
+  "immutable_path": "releases/sha256-67634077ac77ee82fa2f8cef093c57723c6a139dc15d4eb1019897fa361885dc",
+  "target_binding": {
+    "file_id": "1157f24b-a8f1-81bf-8008-c27ff8184acb",
+    "page_id": "1157f24b-a8f1-81bf-8008-c27ff8184acc",
+    "root_id": "00000000-0000-0000-0000-000000000000",
+    "revision": 0
+  },
+  "rollback_predecessor": {
+    "package": "@sideyard/penpot-plugin-t25-candidate-003",
+    "version": "0.0.0-t25.3",
+    "release_digest": "5da77ddb9abf4b32af6967c7b70f0d542691331587ff48a9442c7c644a02175c"
+  },
+  "artifacts": [
+    {
+      "path": "icon.svg",
+      "sha256": "8b03a78a8ee29ed3d1b9fb9093052b9277f7a259dfaeeeea0383f0c2c5c13801"
+    },
+    {
+      "path": "index.html",
+      "sha256": "e944fd2c7d25184128f3c86fc90f8292e30eec1d3ebfcabab63ffea12b1830c8"
+    },
+    {
+      "path": "manifest.json",
+      "sha256": "1f58964452eff8fe69554ff820dff2309dc643de314c96b22466dadac76864de"
+    },
+    {
+      "path": "panel-contract.js",
+      "sha256": "d46e0acd5f649769f952b33e7a7567aa595700b898a27f697a15f138aa16535d"
+    },
+    {
+      "path": "panel.js",
+      "sha256": "d967942968732a3010b7bbec5b79bf856a7a936e5cf349468649b3189fd67a85"
+    },
+    {
+      "path": "plugin.js",
+      "sha256": "ac3d92075ff2aed6a6d796a56bb216beff0b0255e0e28bdf2e58687eca800fd5"
+    },
+    {
+      "path": "SBOM.cdx.json",
+      "sha256": "7537fb924c4f564a62068fa624ee23680099f1fcdfb45cc9d837f6b795d2dd33"
+    }
+  ],
+  "protocol": {
+    "handshake": "sideyard.t28.handshake.init.v1",
+    "accepted_request": "sideyard.t28.probe.v1",
+    "reply_types": [
+      "sideyard.t28.handshake.challenge.v1",
+      "sideyard.t28.probe.ack.v1",
+      "sideyard.t28.bridge.reject.v1"
+    ],
+    "rejection_reasons": [
+      "invalid_message",
+      "unknown_type",
+      "invalid_session",
+      "invalid_capability",
+      "expired_session",
+      "replay_detected",
+      "runtime_entropy_unavailable"
+    ]
+  },
+  "prohibitions": [
+    "writer",
+    "plan",
+    "approval",
+    "issuer",
+    "credentials",
+    "network",
+    "storage",
+    "sideyard-transport",
+    "document-read",
+    "document-write",
+    "production-target"
+  ]
+}

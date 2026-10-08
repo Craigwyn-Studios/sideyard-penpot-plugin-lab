@@ -1,0 +1,35 @@
+{
+  "schema_version": "sideyard.penpot.t29-admission-receipt.v1",
+  "disposition": "t29-user-authorized-no-write-authority-envelope-admission",
+  "release_digest": "ea51fcd837eb11335d413b5e6d930836c311955b93ba4b822da216a021978776",
+  "target_binding": {
+    "file_id": "1157f24b-a8f1-81bf-8008-c27ff8184acb",
+    "page_id": "1157f24b-a8f1-81bf-8008-c27ff8184acc",
+    "root_id": "00000000-0000-0000-0000-000000000000",
+    "revision": 0
+  },
+  "authorizes": [
+    "local-static-packet-retention",
+    "public-lab-static-artifact-commit",
+    "immutable-host-deployment",
+    "no-write-plugin-install",
+    "signed-envelope-verification-exercise",
+    "panel-open",
+    "refresh",
+    "plugin-removal",
+    "rollback-install"
+  ],
+  "prohibits": [
+    "writer",
+    "plan-execution",
+    "approval",
+    "private-key",
+    "credentials",
+    "network",
+    "storage",
+    "sideyard-transport",
+    "document-read",
+    "document-write",
+    "production-target"
+  ]
+}

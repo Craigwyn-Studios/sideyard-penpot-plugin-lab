@@ -1,0 +1,49 @@
+{
+  "schema_version": "sideyard.penpot.t25-no-write-release-receipt.v1",
+  "test_only": true,
+  "capability_state": "bridge_free_static_no_write",
+  "package": "@sideyard/penpot-plugin-t25-candidate-003",
+  "package_version": "0.0.0-t25.3",
+  "release_digest": "5da77ddb9abf4b32af6967c7b70f0d542691331587ff48a9442c7c644a02175c",
+  "immutable_path": "releases/sha256-5da77ddb9abf4b32af6967c7b70f0d542691331587ff48a9442c7c644a02175c",
+  "target_binding": {
+    "file_id": "1157f24b-a8f1-81bf-8008-c27ff8184acb",
+    "page_id": "1157f24b-a8f1-81bf-8008-c27ff8184acc",
+    "root_id": "00000000-0000-0000-0000-000000000000",
+    "revision": 0
+  },
+  "rollback_predecessor": null,
+  "artifacts": [
+    {
+      "path": "icon.svg",
+      "sha256": "42fbf9a7770d23c162ffd78685d65cb489a755c81a944fd36ece4acbd07d58d9"
+    },
+    {
+      "path": "index.html",
+      "sha256": "fefc37975871e1438aeab6c77b9f3dc872aefe552e19c2ee502f83d5e69a7b6a"
+    },
+    {
+      "path": "manifest.json",
+      "sha256": "d35c0a1ebf3a3cc2ae837830645b0bc743995e8d932043ad31a03611666e65b7"
+    },
+    {
+      "path": "plugin.js",
+      "sha256": "4ee4e1e3b08078652ae5246741327737765cd11abfa9e818a4cb171893fec7a0"
+    },
+    {
+      "path": "SBOM.cdx.json",
+      "sha256": "892bbf37875b5758465ac4bc3403aba1cd951dc3de2cbd4b51219d0fa9c0114e"
+    }
+  ],
+  "prohibitions": [
+    "writer",
+    "plan",
+    "approval",
+    "issuer",
+    "credentials",
+    "network",
+    "storage",
+    "message-bridge",
+    "production-target"
+  ]
+}

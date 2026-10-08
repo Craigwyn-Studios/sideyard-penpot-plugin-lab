@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sideyard T27 Typed No-Write Bridge Candidate 001</title>
+</head>
+<body>
+  <main>
+    <h1>Sideyard T27 Typed No-Write Bridge Candidate 001</h1>
+    <p>Manifest-relative panel. The only enabled operation is an inert typed ping.</p>
+    <div>
+      <button id="valid" type="button">Send valid ping</button>
+      <button id="malformed" type="button">Send malformed ping</button>
+      <button id="unknown" type="button">Send unknown type</button>
+      <button id="replay" type="button">Replay valid ping</button>
+    </div>
+    <output id="result" aria-live="polite">Awaiting local bridge test.</output>
+  </main>
+  <script>
+    const result = document.getElementById("result");
+    const valid = { type: "sideyard.t27.bridge.ping.v1", protocol_version: 1, request_id: "t27-valid-001" };
+    const send = (message) => window.parent.postMessage(message, "*");
+    document.getElementById("valid").addEventListener("click", () => send(valid));
+    document.getElementById("malformed").addEventListener("click", () => send({ type: "sideyard.t27.bridge.ping.v1", protocol_version: 1 }));
+    document.getElementById("unknown").addEventListener("click", () => send({ type: "sideyard.t27.bridge.unknown.v1", protocol_version: 1, request_id: "t27-unknown-001" }));
+    document.getElementById("replay").addEventListener("click", () => send(valid));
+    window.addEventListener("message", (event) => {
+      const message = event.data;
+      if (!message || typeof message !== "object" || typeof message.type !== "string") return;
+      if (message.type === "sideyard.t27.bridge.ack.v1") {
+        result.textContent = `ack:${message.request_id}:${message.disposition}`;
+      } else if (message.type === "sideyard.t27.bridge.reject.v1") {
+        result.textContent = `reject:${message.request_id ?? "none"}:${message.reason}`;
+      }
+    });
+  </script>
+</body>
+</html>

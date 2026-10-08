@@ -1,0 +1,8 @@
+{
+  "name": "Sideyard T27 Typed No-Write Bridge Candidate 001",
+  "description": "Disposable typed panel/main bridge candidate. No Sideyard operation is enabled.",
+  "version": 2,
+  "code": "plugin.js",
+  "icon": "icon.svg",
+  "permissions": ["content:read"]
+}

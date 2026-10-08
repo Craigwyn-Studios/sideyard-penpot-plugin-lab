@@ -1,0 +1,72 @@
+{
+  "schema_version": "sideyard.penpot.t27-no-write-bridge-release-receipt.v1",
+  "test_only": true,
+  "capability_state": "manifest_relative_typed_no_write_bridge",
+  "package": "@sideyard/penpot-plugin-t27-candidate-003",
+  "package_version": "0.0.0-t27.3",
+  "release_digest": "a6e43ecb14d24c653454ff67a5375109955ecfc6a8a8b7e84af635855db9d32c",
+  "immutable_path": "releases/sha256-a6e43ecb14d24c653454ff67a5375109955ecfc6a8a8b7e84af635855db9d32c",
+  "target_binding": {
+    "file_id": "1157f24b-a8f1-81bf-8008-c27ff8184acb",
+    "page_id": "1157f24b-a8f1-81bf-8008-c27ff8184acc",
+    "root_id": "00000000-0000-0000-0000-000000000000",
+    "revision": 0
+  },
+  "rollback_predecessor": {
+    "package": "@sideyard/penpot-plugin-t25-candidate-003",
+    "version": "0.0.0-t25.3",
+    "release_digest": "5da77ddb9abf4b32af6967c7b70f0d542691331587ff48a9442c7c644a02175c"
+  },
+  "artifacts": [
+    {
+      "path": "icon.svg",
+      "sha256": "42fbf9a7770d23c162ffd78685d65cb489a755c81a944fd36ece4acbd07d58d9"
+    },
+    {
+      "path": "index.html",
+      "sha256": "28d93bcef27977555c7c107eef921d00e20432882855ef0ad6131969cc1dabf0"
+    },
+    {
+      "path": "manifest.json",
+      "sha256": "a00be238685f87f4d64936d8b5d2014fdc0f56d4ea5b2dbf6a67a54a11e0c338"
+    },
+    {
+      "path": "panel.js",
+      "sha256": "8b03f4abb08fec2ee07864685b7c0e1ae2ed762314a8680c9a09eb28b2f3f639"
+    },
+    {
+      "path": "plugin.js",
+      "sha256": "7976c3c1dbb5e9ee7ca13900fd56b11f50446b2ca77ba28628e89c7caa44a1b9"
+    },
+    {
+      "path": "SBOM.cdx.json",
+      "sha256": "41a3653cf87ade8bb6000086d86dc8931eb8263ee5d8047dc4b6deb0e595efa7"
+    }
+  ],
+  "protocol": {
+    "accepted_request": "sideyard.t27.bridge.ping.v1",
+    "reply_types": [
+      "sideyard.t27.bridge.ack.v1",
+      "sideyard.t27.bridge.reject.v1"
+    ],
+    "rejection_reasons": [
+      "invalid_message",
+      "unknown_type",
+      "replay_detected"
+    ]
+  },
+  "prohibitions": [
+    "writer",
+    "plan",
+    "approval",
+    "issuer",
+    "credentials",
+    "network",
+    "storage",
+    "sideyard-transport",
+    "document-read",
+    "document-write",
+    "production-target",
+    "external-panel-url"
+  ]
+}

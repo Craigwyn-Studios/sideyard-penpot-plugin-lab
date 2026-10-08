@@ -1,0 +1,33 @@
+{
+  "schema_version": "sideyard.penpot.t25-admission-receipt.v1",
+  "disposition": "t25-user-authorized-no-write-external-panel-lifecycle-admission",
+  "release_digest": "0bee2a11b5cb5783ac8b1770d583f73d4572afd90d5bb93e1c3ee165c2b0f4da",
+  "target_binding": {
+    "file_id": "1157f24b-a8f1-81bf-8008-c27ff8184acb",
+    "page_id": "1157f24b-a8f1-81bf-8008-c27ff8184acc",
+    "root_id": "00000000-0000-0000-0000-000000000000",
+    "revision": 0
+  },
+  "authorizes": [
+    "local-static-packet-retention",
+    "public-lab-static-artifact-commit",
+    "immutable-host-deployment",
+    "no-write-plugin-install",
+    "panel-open",
+    "refresh-restart",
+    "plugin-removal",
+    "rollback-install"
+  ],
+  "prohibits": [
+    "document-write",
+    "writer",
+    "plan",
+    "approval",
+    "issuer",
+    "credentials",
+    "network",
+    "storage",
+    "message-bridge",
+    "production-target"
+  ]
+}

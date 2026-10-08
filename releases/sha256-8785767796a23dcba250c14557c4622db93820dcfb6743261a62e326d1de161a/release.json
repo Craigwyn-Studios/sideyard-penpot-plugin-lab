@@ -1,0 +1,54 @@
+{
+  "schema_version": "sideyard.penpot.t26-no-write-release-receipt.v1",
+  "test_only": true,
+  "capability_state": "manifest_relative_static_no_write",
+  "package": "@sideyard/penpot-plugin-t26-candidate-001",
+  "package_version": "0.0.0-t26.1",
+  "release_digest": "8785767796a23dcba250c14557c4622db93820dcfb6743261a62e326d1de161a",
+  "immutable_path": "releases/sha256-8785767796a23dcba250c14557c4622db93820dcfb6743261a62e326d1de161a",
+  "target_binding": {
+    "file_id": "1157f24b-a8f1-81bf-8008-c27ff8184acb",
+    "page_id": "1157f24b-a8f1-81bf-8008-c27ff8184acc",
+    "root_id": "00000000-0000-0000-0000-000000000000",
+    "revision": 0
+  },
+  "rollback_predecessor": {
+    "package": "@sideyard/penpot-plugin-t25-candidate-003",
+    "version": "0.0.0-t25.3",
+    "release_digest": "5da77ddb9abf4b32af6967c7b70f0d542691331587ff48a9442c7c644a02175c"
+  },
+  "artifacts": [
+    {
+      "path": "icon.svg",
+      "sha256": "42fbf9a7770d23c162ffd78685d65cb489a755c81a944fd36ece4acbd07d58d9"
+    },
+    {
+      "path": "index.html",
+      "sha256": "80a5dd4b14c7eb127dd680eb72178339bc6e04b0463afc3b07cb752b72fe071c"
+    },
+    {
+      "path": "manifest.json",
+      "sha256": "6ac9bcadbd8ff4903e8c5d2e4c4798a5f077670d1fe56e85065085ac829950ff"
+    },
+    {
+      "path": "plugin.js",
+      "sha256": "aada6bb1493b396c8714f2d3d17cba111c59c730ed347f5f3969b5fce3158ded"
+    },
+    {
+      "path": "SBOM.cdx.json",
+      "sha256": "892bbf37875b5758465ac4bc3403aba1cd951dc3de2cbd4b51219d0fa9c0114e"
+    }
+  ],
+  "prohibitions": [
+    "writer",
+    "plan",
+    "approval",
+    "issuer",
+    "credentials",
+    "network",
+    "storage",
+    "message-bridge",
+    "production-target",
+    "external-panel-url"
+  ]
+}

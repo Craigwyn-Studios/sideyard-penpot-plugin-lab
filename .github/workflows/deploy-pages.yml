@@ -35,8 +35,9 @@ jobs:
           test "$(printf '%s' "$RECEIPT" | grep -Ec '^[a-f0-9]{64}$')" = 1
           test -f "$RELEASE_PATH/manifest.json"
           test -f "$RELEASE_PATH/SHA256SUMS"
-          test -f "$RELEASE_PATH/SBOM.spdx.json"
+          test -f "$RELEASE_PATH/SBOM.cdx.json"
           test -f "$RELEASE_PATH/admission-receipt.json"
+          test "$(sha256sum "$RELEASE_PATH/admission-receipt.json" | awk '{print $1}')" = "$RECEIPT"
           (
             cd "$RELEASE_PATH"
             sha256sum -c SHA256SUMS

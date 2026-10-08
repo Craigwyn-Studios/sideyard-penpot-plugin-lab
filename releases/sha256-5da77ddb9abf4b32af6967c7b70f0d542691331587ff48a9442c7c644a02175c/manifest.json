@@ -1,0 +1,8 @@
+{
+  "name": "Sideyard T25 Static No-Write Rollback Candidate 003",
+  "description": "Disposable static compatibility candidate. No Sideyard operation is enabled.",
+  "version": 2,
+  "code": "plugin.js",
+  "icon": "icon.svg",
+  "permissions": ["content:read"]
+}
